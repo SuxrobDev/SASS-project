@@ -1,0 +1,47 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.menu {
+  @include gradient;
+  .container {
+    .navbar-brand {
+      img {
+        width: 55px;
+        height: 55px;
+        transition: 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .collapse {
+      .navbar-nav {
+        .nav-item {
+          padding: 0 0.7rem;
+          transition: 1s;
+          &:hover {
+            transform: scale(1.1);
+            .nav-link {
+              color: black;
+            }
+          }
+          .nav-link {
+            color: white;
+            text-transform: capitalize;
+            font-weight: 600;
+          }
+        }
+      }
+      .rounded-pill {
+        span {
+          img {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
